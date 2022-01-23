@@ -29,8 +29,8 @@ int main(void)
         //----------------
 
         // // vyrenderovat 0Y maxX pixelů
-        for (int i = 0; i <= maxPixelsWidth*pixel-pixel; i = i + pixel){
-            if (i == 0){
+        for (int i = 64; i <= maxPixelsWidth*pixel-pixel; i = i + pixel){
+            if (i == 64){
                 DrawRectangle(i, 0, pixel, pixel, PURPLE);        
             }
             else if (i == maxPixelsWidth*pixel-pixel){
@@ -43,8 +43,8 @@ int main(void)
         }
 
         // vyrenderovat maxY 0X pixelů
-        for (int i = 0; i <= maxPixelsHeight*pixel; i = i + pixel){
-            if (i == 0){
+        for (int i = 64; i <= maxPixelsHeight*pixel; i = i + pixel){
+            if (i == 64){
                 DrawRectangle(0, i, pixel, pixel, PURPLE);    
             }
             else if (i == maxPixelsHeight*pixel){
@@ -57,11 +57,10 @@ int main(void)
 
         //----------------
 
-        DrawText(TextFormat("screenWidth: %.0f", screenWidth), 10, screenHeight-30, 20, LIGHTGRAY);
-        DrawText(TextFormat("screenHeight: %.0f", screenHeight), 10, screenHeight-50, 20, LIGHTGRAY);
-        DrawText(TextFormat("maxPixelsWidth : %.0f", maxPixelsWidth), 10, screenHeight-70, 20, LIGHTGRAY);
-        DrawText(TextFormat("maxPixelsHeight : %.0f", maxPixelsHeight), 10, screenHeight-90, 20, LIGHTGRAY);
-        DrawText(TextFormat("maxPixelsHeight*pixel : %.0f", maxPixelsHeight*pixel), 10, screenHeight-110, 20, LIGHTGRAY);
+        DrawText(TextFormat("screenWidth: %.0f", screenWidth), 20, screenHeight-30, 20, LIGHTGRAY);
+        DrawText(TextFormat("screenHeight: %.0f", screenHeight), 20, screenHeight-50, 20, LIGHTGRAY);
+        DrawText(TextFormat("maxPixelsWidth : %.0i", maxPixelsWidth), 20, screenHeight-70, 20, LIGHTGRAY);
+        DrawText(TextFormat("maxPixelsHeight : %.0i", maxPixelsHeight), 20, screenHeight-90, 20, LIGHTGRAY);
 
         //----------------
 
