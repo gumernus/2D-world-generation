@@ -30,8 +30,8 @@ void drawColumn(int x, int y){
 
 void drawTerrain(){
     for (int i = 0; i < maxPixelsWidth; i++){
-    int random = rand() % 40 + 10;
-    drawColumn(i,random);
+    int randNum = rand() % (40 - 37 + 1) + 37;
+    drawColumn(i,randNum);
     // drawColumn(i, i);
     }
 }
