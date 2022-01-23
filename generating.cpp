@@ -24,6 +24,14 @@ void drawColumn(int x, int y){
     }
 }
 
+void drawTerrain(){
+    for (int i = 0; i < maxPixelsWidth; i++){
+    int randomNumber = 0 + ( std::rand() % ( maxPixelsHeight - 0 + 1 ) );
+    drawColumn(i,randomNumber);
+    // drawColumn(i, i);
+    }
+}
+
 int main(void)
 {
     InitWindow(screenWidth, screenHeight, "Gumernus generating world");
@@ -38,26 +46,7 @@ int main(void)
 
         //----------------
 
-        // // vyrenderovat řádek pixelů
-        // for (int i = 64; i <= maxPixelsWidth*pixel-pixel; i = i + pixel){
-        //     if (i == 64){
-        //         DrawRectangle(i, 0, pixel, pixel, PURPLE);        
-        //     }
-        //     else if (i == maxPixelsWidth*pixel-pixel){
-        //         DrawRectangle(i, 0, pixel, pixel, GREEN);      
-        //     }
-        //     else{
-        //         DrawRectangle(i, 0, pixel, pixel, RED);      
-        //     }
-        // }
-
-        // vyrenderovat sloupec pixelů
-        for (int i = 0; i < maxPixelsWidth; i++){
-            int randomNumber = 0 + ( std::rand() % ( maxPixelsHeight - 0 + 1 ) );
-            drawColumn(i,randomNumber);
-            // drawColumn(i, i);
-        }
-
+        drawTerrain();
 
         //----------------
 
